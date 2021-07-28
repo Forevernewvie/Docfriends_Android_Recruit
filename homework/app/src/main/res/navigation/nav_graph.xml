@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        tools:layout="@layout/fragment_main"
+        android:name="com.jaebin.homework.View.MainFragment"
+        android:label="MainFragment" />
+    <fragment
+        android:id="@+id/consultFragment"
+        android:name="com.jaebin.homework.View.ConsultFragment"
+        tools:layout="@layout/fragment_consult"
+        android:label="ConsultFragment" />
+    <fragment
+        android:id="@+id/expertFragment"
+        tools:layout="@layout/fragment_expert"
+        android:name="com.jaebin.homework.View.ExpertFragment"
+        android:label="ExpertFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        tools:layout="@layout/fragment_profile"
+        android:name="com.jaebin.homework.View.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/untactFragment"
+        tools:layout="@layout/fragment_untact"
+        android:name="com.jaebin.homework.View.UntactFragment"
+        android:label="UntactFragment" />
+</navigation>
