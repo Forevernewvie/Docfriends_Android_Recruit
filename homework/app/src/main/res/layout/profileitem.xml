@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="7dp"
+    android:id="@+id/card_view"
+    app:cardBackgroundColor="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:id="@+id/profile_fab_btn"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           app:fabSize="mini"
+           android:layout_margin="5dp"
+           android:backgroundTint="@color/white"
+           app:srcCompat="@drawable/ic_edit"
+           />
+        
+        <EditText
+            android:id="@+id/search_context"
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_background"
+            android:textColorHint="@color/black"
+            android:text="박준걸1님이 궁금한 증상을 알려주세요"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

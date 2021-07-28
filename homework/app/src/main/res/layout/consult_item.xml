@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="7dp"
+    android:id="@+id/card_view"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="편도결석이 자꾸 나와요~ 이비인후과 가서 가끔씩"
+            />
+
+
+        <TextView
+           android:layout_marginStart="10dp"
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="편도결석"
+            android:textSize="10sp"
+            />
+
+
+        <TextView
+            android:id="@+id/context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:text="콧볼크고 전체적으로 낮은데 얼마정도 될까요? 그리고 부분모델 신청하면 몇프로 할인되나오ㅡ?"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+
+        >
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="답변"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"/>
+
+            <TextView
+                android:layout_marginStart="2dp"
+                android:id="@+id/answerCnt"
+                android:text="2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/timeStamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2021.05.28"
+                android:textSize="13sp"
+                android:layout_marginEnd="6dp"
+                android:layout_gravity="right"
+
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
