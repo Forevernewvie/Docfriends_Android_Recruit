@@ -6,20 +6,23 @@ import com.bumptech.glide.Glide
 import com.jaebin.homework.AppContext
 import com.jaebin.homework.R
 import com.jaebin.homework.data.Expert
+import com.jaebin.homework.data.Tag
 import com.jaebin.homework.data.TagX
 import com.jaebin.homework.data.Title
 import com.jaebin.homework.databinding.ExpertItemBinding
+import com.jaebin.homework.recycler.adapter.convertHelper
 import kotlin.math.exp
 
-class expertViewHolder(val expertItem: ExpertItemBinding) : RecyclerView.ViewHolder(expertItem.root) {
+class expertViewHolder(val expertItem: ExpertItemBinding) : RecyclerView.ViewHolder(expertItem.root),
+    convertHelper {
 
 
     fun bind(item: Expert){
-        if(makeTagString(item.tagList) == ""){
+        if(makeTagXString(item.tagList) == ""){
             expertItem.tagX.text = item.companyName
             expertItem.tagX.setTextSize(Dimension.SP,12F)
         } else{
-            expertItem.tagX.text = makeTagString(item.tagList)
+            expertItem.tagX.text = makeTagXString(item.tagList)
             expertItem.hospitalName.text = item.companyName
         }
         expertItem.doctorNameKind.text = item.name+"("+item.typeName+")"
@@ -30,8 +33,7 @@ class expertViewHolder(val expertItem: ExpertItemBinding) : RecyclerView.ViewHol
 
     }
 
-
-    fun makeTagString(item: List<TagX>): String {
+    override fun makeTagXString(item: List<TagX>): String {
         var str =""
 
         for (i in 0 until  item.size){
@@ -45,9 +47,12 @@ class expertViewHolder(val expertItem: ExpertItemBinding) : RecyclerView.ViewHol
         return str
     }
 
-
-
-
+    override fun makeTagString(item: List<Tag>): String {
+        return ""
+    }
+    override fun longtoDateTime(time: Long): String {
+        return ""
+    }
 
 
 }

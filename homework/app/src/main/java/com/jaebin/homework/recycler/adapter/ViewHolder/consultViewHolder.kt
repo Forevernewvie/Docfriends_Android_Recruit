@@ -3,6 +3,7 @@ package com.jaebin.homework.recycler.adapter.ViewHolder
 import androidx.recyclerview.widget.RecyclerView
 import com.jaebin.homework.data.Consult
 import com.jaebin.homework.data.Tag
+import com.jaebin.homework.data.TagX
 import com.jaebin.homework.databinding.ConsultItemBinding
 import com.jaebin.homework.recycler.adapter.convertHelper
 import java.text.SimpleDateFormat
@@ -35,6 +36,10 @@ class consultViewHolder(val item: ConsultItemBinding) : RecyclerView.ViewHolder(
             }
         }
         return str
+    }
+
+    override fun makeTagXString(item: List<TagX>): String {
+        return ""
     }
 
     override fun longtoDateTime(time: Long): String {
